@@ -410,15 +410,15 @@ Public function excelPersonel(){
         JOIN `bagan` `b` ON `b`.`baganID` = `p`.`baganID`
         JOIN `outlet` `o` ON `o`.`outletID` = `p`.`outletID`";        
     $personel = $this->db->query($sql);
-    // dump($personel->num_rows());
-    // exit();
+    if (empty($personel->result())) {
+        echo "data personel tidak ada!!";
+        exit();
+    }
     $exceldata="";
     foreach ($personel->result_array() as $row){
         $exceldata[] = $row;
     }
 
-    // dump($exceldata);
-    // exit();
     //Fill data 
     $this->excel->getActiveSheet()->fromArray($exceldata, null, 'A2');
     $this->excel->getActiveSheet()->getStyle('A2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
