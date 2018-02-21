@@ -13,7 +13,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>Login Page | RKAT</title>
+    <title>Login Page | Personel</title>
     <!-- Favicons-->
     <link rel="icon" href="<?php echo base_url(); ?>/assets/template/materialize/images/favicon/favicon-32x32.png" sizes="32x32">
     <!-- Favicons-->
